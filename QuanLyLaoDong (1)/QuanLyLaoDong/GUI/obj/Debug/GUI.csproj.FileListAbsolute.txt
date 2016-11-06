@@ -1,1 +1,2 @@
 C:\Users\Ken\Downloads\BaiTapLon (1)\New folder\QuanLyLaoDong (1)\QuanLyLaoDong\GUI\bin\Debug\GUI.exe.config
+D:\Git\WindowNC\QuanLyLaoDong (1)\QuanLyLaoDong\GUI\bin\Debug\GUI.exe.config
