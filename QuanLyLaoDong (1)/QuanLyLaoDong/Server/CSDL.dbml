@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CSDLQLLD" Class="CSDLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=CSDLQLLD;Integrated Security=True" SettingsObjectName="Server.Properties.Settings" SettingsPropertyName="CSDLQLLDConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CongTrinh" Member="CongTrinhs">
+    <Type Name="CongTrinh">
+      <Column Name="MACT" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENCT" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DIADIEM" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NGAYCAPGP" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NGAYKC" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NGAYHT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="CongTrinh_PhanCong" Member="PhanCongs" ThisKey="MACT" OtherKey="MACT" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhongBan" Member="PhongBans">
+    <Type Name="PhongBan">
+      <Column Name="MAPB" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENPB" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="PhongBan_PhanCong" Member="PhanCongs" ThisKey="MAPB" OtherKey="MAPB" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="MANV" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PHAI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="MAPB" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="NhanVien_PhanCong" Member="PhanCongs" ThisKey="MANV" OtherKey="MANV" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhanCong" Member="PhanCongs">
+    <Type Name="PhanCong">
+      <Column Name="MAPB" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MACT" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MANV" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SLNGAYCONG" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="CongTrinh_PhanCong" Member="CongTrinh" ThisKey="MACT" OtherKey="MACT" Type="CongTrinh" IsForeignKey="true" />
+      <Association Name="NhanVien_PhanCong" Member="NhanVien" ThisKey="MANV" OtherKey="MANV" Type="NhanVien" IsForeignKey="true" />
+      <Association Name="PhongBan_PhanCong" Member="PhongBan" ThisKey="MAPB" OtherKey="MAPB" Type="PhongBan" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

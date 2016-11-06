@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Server" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetAllDataFromCongTrinh_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromCongTrinh" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDataFromCongTrinh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromCongTrinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDataFromNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDataFromNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDataFromPhongBan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromPhongBan" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDataFromPhongBan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromPhongBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDataFromPhanCong_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromPhanCong" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDataFromPhanCong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataFromPhanCongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertCt_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCt" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertCt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertNv_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertNv" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertNv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertNvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertPhongBan_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertPhongBan" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertPhongBan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertPhongBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertPc_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertPc" />
+  </wsdl:message>
+  <wsdl:message name="IService_insertPc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertPcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromCongTrinh_InputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromCongTrinh" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromCongTrinh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromCongTrinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromNhanVien_InputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromNhanVien" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromNhanVien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromNhanVienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromPhongBan_InputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromPhongBan" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromPhongBan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromPhongBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromPhanCong_InputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromPhanCong" />
+  </wsdl:message>
+  <wsdl:message name="IService_remove1datafromPhanCong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:remove1datafromPhanCongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_seach1CongtrinhbymaCT_InputMessage">
+    <wsdl:part name="parameters" element="tns:seach1CongtrinhbymaCT" />
+  </wsdl:message>
+  <wsdl:message name="IService_seach1CongtrinhbymaCT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:seach1CongtrinhbymaCTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_seach1Nhanvienbymanv_InputMessage">
+    <wsdl:part name="parameters" element="tns:seach1Nhanvienbymanv" />
+  </wsdl:message>
+  <wsdl:message name="IService_seach1Nhanvienbymanv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:seach1NhanvienbymanvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1Nhanvien_InputMessage">
+    <wsdl:part name="parameters" element="tns:change1Nhanvien" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1Nhanvien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:change1NhanvienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1CongTrinh_InputMessage">
+    <wsdl:part name="parameters" element="tns:change1CongTrinh" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1CongTrinh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:change1CongTrinhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1PhongBan_InputMessage">
+    <wsdl:part name="parameters" element="tns:change1PhongBan" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1PhongBan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:change1PhongBanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1PhanCong_InputMessage">
+    <wsdl:part name="parameters" element="tns:change1PhanCong" />
+  </wsdl:message>
+  <wsdl:message name="IService_change1PhanCong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:change1PhanCongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMaPBfromMaNV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaPBfromMaNV" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMaPBfromMaNV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaPBfromMaNVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_getMaNVfromMAPB_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMaNVfromMAPB" />
+  </wsdl:message>
+  <wsdl:message name="IService_getMaNVfromMAPB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMaNVfromMAPBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="GetAllDataFromCongTrinh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllDataFromCongTrinh" message="tns:IService_GetAllDataFromCongTrinh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllDataFromCongTrinhResponse" message="tns:IService_GetAllDataFromCongTrinh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataFromNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllDataFromNhanVien" message="tns:IService_GetAllDataFromNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllDataFromNhanVienResponse" message="tns:IService_GetAllDataFromNhanVien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataFromPhongBan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllDataFromPhongBan" message="tns:IService_GetAllDataFromPhongBan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllDataFromPhongBanResponse" message="tns:IService_GetAllDataFromPhongBan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataFromPhanCong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllDataFromPhanCong" message="tns:IService_GetAllDataFromPhanCong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllDataFromPhanCongResponse" message="tns:IService_GetAllDataFromPhanCong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertCt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertCt" message="tns:IService_insertCt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertCtResponse" message="tns:IService_insertCt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertNv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertNv" message="tns:IService_insertNv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertNvResponse" message="tns:IService_insertNv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPhongBan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertPhongBan" message="tns:IService_insertPhongBan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertPhongBanResponse" message="tns:IService_insertPhongBan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/insertPc" message="tns:IService_insertPc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/insertPcResponse" message="tns:IService_insertPc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromCongTrinh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/remove1datafromCongTrinh" message="tns:IService_remove1datafromCongTrinh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/remove1datafromCongTrinhResponse" message="tns:IService_remove1datafromCongTrinh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromNhanVien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/remove1datafromNhanVien" message="tns:IService_remove1datafromNhanVien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/remove1datafromNhanVienResponse" message="tns:IService_remove1datafromNhanVien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromPhongBan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/remove1datafromPhongBan" message="tns:IService_remove1datafromPhongBan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/remove1datafromPhongBanResponse" message="tns:IService_remove1datafromPhongBan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromPhanCong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/remove1datafromPhanCong" message="tns:IService_remove1datafromPhanCong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/remove1datafromPhanCongResponse" message="tns:IService_remove1datafromPhanCong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="seach1CongtrinhbymaCT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/seach1CongtrinhbymaCT" message="tns:IService_seach1CongtrinhbymaCT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/seach1CongtrinhbymaCTResponse" message="tns:IService_seach1CongtrinhbymaCT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="seach1Nhanvienbymanv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/seach1Nhanvienbymanv" message="tns:IService_seach1Nhanvienbymanv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/seach1NhanvienbymanvResponse" message="tns:IService_seach1Nhanvienbymanv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="change1Nhanvien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/change1Nhanvien" message="tns:IService_change1Nhanvien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/change1NhanvienResponse" message="tns:IService_change1Nhanvien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="change1CongTrinh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/change1CongTrinh" message="tns:IService_change1CongTrinh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/change1CongTrinhResponse" message="tns:IService_change1CongTrinh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="change1PhongBan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/change1PhongBan" message="tns:IService_change1PhongBan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/change1PhongBanResponse" message="tns:IService_change1PhongBan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="change1PhanCong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/change1PhanCong" message="tns:IService_change1PhanCong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/change1PhanCongResponse" message="tns:IService_change1PhanCong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaPBfromMaNV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetMaPBfromMaNV" message="tns:IService_GetMaPBfromMaNV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetMaPBfromMaNVResponse" message="tns:IService_GetMaPBfromMaNV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaNVfromMAPB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/getMaNVfromMAPB" message="tns:IService_getMaNVfromMAPB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/getMaNVfromMAPBResponse" message="tns:IService_getMaNVfromMAPB_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllDataFromCongTrinh">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllDataFromCongTrinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataFromNhanVien">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllDataFromNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataFromPhongBan">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllDataFromPhongBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataFromPhanCong">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllDataFromPhanCong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertCt">
+      <soap:operation soapAction="http://tempuri.org/IService/insertCt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertNv">
+      <soap:operation soapAction="http://tempuri.org/IService/insertNv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPhongBan">
+      <soap:operation soapAction="http://tempuri.org/IService/insertPhongBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPc">
+      <soap:operation soapAction="http://tempuri.org/IService/insertPc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromCongTrinh">
+      <soap:operation soapAction="http://tempuri.org/IService/remove1datafromCongTrinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromNhanVien">
+      <soap:operation soapAction="http://tempuri.org/IService/remove1datafromNhanVien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromPhongBan">
+      <soap:operation soapAction="http://tempuri.org/IService/remove1datafromPhongBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="remove1datafromPhanCong">
+      <soap:operation soapAction="http://tempuri.org/IService/remove1datafromPhanCong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seach1CongtrinhbymaCT">
+      <soap:operation soapAction="http://tempuri.org/IService/seach1CongtrinhbymaCT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seach1Nhanvienbymanv">
+      <soap:operation soapAction="http://tempuri.org/IService/seach1Nhanvienbymanv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="change1Nhanvien">
+      <soap:operation soapAction="http://tempuri.org/IService/change1Nhanvien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="change1CongTrinh">
+      <soap:operation soapAction="http://tempuri.org/IService/change1CongTrinh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="change1PhongBan">
+      <soap:operation soapAction="http://tempuri.org/IService/change1PhongBan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="change1PhanCong">
+      <soap:operation soapAction="http://tempuri.org/IService/change1PhanCong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaPBfromMaNV">
+      <soap:operation soapAction="http://tempuri.org/IService/GetMaPBfromMaNV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaNVfromMAPB">
+      <soap:operation soapAction="http://tempuri.org/IService/getMaNVfromMAPB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Server/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
